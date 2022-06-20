@@ -14,7 +14,7 @@ a {
   height: 70%;
   width: 100px;
   border-color: white;
- }
+}
 
 .App-logo {
   height: 40vmin;
@@ -60,7 +60,7 @@ a {
   flex-wrap: wrap;
   display: flex;
   align-content: left;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .Header {
@@ -70,7 +70,7 @@ a {
 
 .inputField {
   padding-left: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 li {
@@ -97,7 +97,6 @@ li {
   height: 70%;
   width: 130px;
   border-color: white;
- 
 }
 
 .sortSongsButtonZA {
@@ -105,7 +104,6 @@ li {
   background-color: rgb(155, 81, 20);
   color: white;
   height: 70%;
- 
   border-color: white;
   margin-right: 30px;
 }
@@ -122,46 +120,43 @@ ul {
 }
 
 @media screen and (min-width: 1000px) {
-  
-  
-.addSongButton {
-  margin-left: 30px;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .addSongButton {
+    margin-left: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
   }
-}
 
-.form {
-  background-color: rgb(33, 9, 118);
-  height: 100%;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  color: white;
-  flex-wrap: wrap;
-  display: flex;
-  align-content: left;
-  flex-direction: row;
-}
+  .App-link {
+    color: #61dafb;
+  }
 
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .form {
+    background-color: rgb(33, 9, 118);
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: white;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: left;
+    flex-direction: row;
+  }
 }

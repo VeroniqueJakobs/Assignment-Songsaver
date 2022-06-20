@@ -2,7 +2,7 @@ import React from "react";
 
 function SongItem(props) {
   return (
-    <table className="table" style={{ width: "100%" }}>
+    <table className="table">
       <tbody>
         <tr>
           <td
