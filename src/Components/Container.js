@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
-import List from "./List";
 import Inputfields from "./Inputfields";
+import List from "./List";
 
 class Container extends React.Component {
   constructor() {
@@ -74,22 +74,22 @@ class Container extends React.Component {
   }
 
   sortSongsAZ() {
-    const sortSongs = [...this.state.songs].sort((a, b) => {
+    const sortedData = [...this.state.songs].sort((a, b) => {
       return a.title > b.title ? 1 : -1;
     });
 
     this.setState({
-      songs: sortSongs,
+      songs: sortedData,
     });
   }
 
   sortSongsZA() {
-    const sortSongs = [...this.state.songs].sort((a, b) => {
+    const sortedData = [...this.state.songs].sort((a, b) => {
       return a.title < b.title ? 1 : -1;
     });
 
     this.setState({
-      songs: sortSongs,
+      songs: sortedData,
     });
   }
 
@@ -105,6 +105,7 @@ class Container extends React.Component {
           sortSongsAZ={this.sortSongsAZ}
           sortSongsZA={this.sortSongsZA}
         />
+
         <table className="table">
           <thead>
             <tr className="song-header">
@@ -115,6 +116,7 @@ class Container extends React.Component {
             </tr>
           </thead>
         </table>
+
         <List songs={this.state.songs} deleteSong={this.deleteSong} />
       </div>
     );

@@ -2,11 +2,11 @@ import React from "react";
 
 function Inputfields(props) {
   return (
-    <div>
+    <div className="formContainer">
       <form className="form" onSubmit={props.onClick}>
         <button
           type="button"
-          className="sortSongsButton"
+          className="sortSongsButtonAZ"
           onClick={props.sortSongsAZ}
         >
           Sort songlist (a-z)
@@ -18,25 +18,25 @@ function Inputfields(props) {
         >
           Sort songlist (z-a)
         </button>
-        <label className="label">Song title:</label>
+
         <input
           className="inputField"
           type="text"
           name="title"
-          placeholder="Song title"
+          placeholder="Song"
           value={props.songs.title}
           onChange={props.handleChange}
         />
-        <label>song artist:</label>
+
         <input
           className="inputField"
           type="text"
           name="artist"
-          placeholder="artist"
+          placeholder="Artist"
           value={props.songs.artist}
           onChange={props.handleChange}
         />
-        <label>song genre:</label>
+
         <select
           className="inputField"
           name="genre"
@@ -56,7 +56,6 @@ function Inputfields(props) {
           <option value="trance">Trance</option>
         </select>
 
-        <label>song rating:</label>
         <select
           className="inputField"
           name="rating"
@@ -72,6 +71,7 @@ function Inputfields(props) {
         </select>
 
         <button className="addSongButton">Add song</button>
+
         <button
           type="button"
           className="deleteButton"

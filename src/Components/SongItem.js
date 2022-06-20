@@ -29,10 +29,14 @@ function SongItem(props) {
             value={props.item.rating}
           >
             {props.item.rating}
-            <button type="button" onClick={() => props.deleteSong(props.id)}>
-              Delete song
-            </button>
           </td>
+          <button
+            type="button"
+            className="deleteSongButton"
+            onClick={() => props.deleteSong(props.id)}
+          >
+            <i class="fas fa-trash" />
+          </button>
         </tr>
       </tbody>
     </table>

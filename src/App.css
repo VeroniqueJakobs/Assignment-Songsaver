@@ -1,16 +1,131 @@
-.App {
+* {
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: #282c34;
+}
+
+.addSongButton {
+  background-color: rgb(117, 197, 128);
+  color: white;
+  height: 70%;
+  width: 100px;
+  border-color: white;
+ }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about {
+  margin: auto;
+  width: 40%;
+}
+
+.deleteButton {
+  background-color: rgb(235, 102, 124);
+  color: white;
+  height: 100%;
+  width: 140px;
+  border-color: white;
+}
+
+.deleteSongButton {
+  background-color: rgb(235, 102, 124);
+  color: white;
+  height: 100%;
+  border-color: rgb(235, 102, 124);
+}
+
+.formContainer {
+  background-color: rgb(33, 9, 118);
+  height: 100%;
+  padding-top: 10px;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  background-color: rgb(33, 9, 118);
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: left;
+  flex-direction:column;
+}
+
+.Header {
+  background-color: rgb(214, 202, 133);
+  padding: 30px;
+}
+
+.inputField {
+  padding-left: 10px;
+  margin-right: 10px; 
+}
+
+li {
+  display: inline;
+}
+
+.list-item {
+  width: 25%;
+  background-color: white;
+  height: 20px;
+}
+
+.song-row__item {
+  width: 25%;
+}
+
+.song-header {
+  height: 50px;
+}
+
+.sortSongsButtonAZ {
+  background-color: rgb(155, 81, 20);
+  color: white;
+  height: 70%;
+  width: 130px;
+  border-color: white;
+ 
+}
+
+.sortSongsButtonZA {
+  width: 130px;
+  background-color: rgb(155, 81, 20);
+  color: white;
+  height: 70%;
+ 
+  border-color: white;
+  margin-right: 30px;
+}
+
+.table {
+  width: 100%;
+  background-color: rgb(245, 214, 17);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  
+  
+.addSongButton {
+  margin-left: 30px;
 }
 
 .App-header {
@@ -35,4 +150,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form {
+  background-color: rgb(33, 9, 118);
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: left;
+  flex-direction: row;
+}
+
 }

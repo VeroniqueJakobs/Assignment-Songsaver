@@ -12,7 +12,7 @@ function About() {
           frontend developer bij Winc Academy. Ik heb de cursus bijna klaar en
           ben nu aan het rondkijken op de arbeidsmarkt. Het lijkt me erg leuk om
           binnenkort aan de slag te gaan als junior frontend developer! De
-          opdracht die op deze pagina staat is getiteld 'Songsaver'. Deze
+          opdracht die op de pagina 'Home' staat is getiteld 'Songsaver'. Deze
           opdracht is de eindopdracht van werken met het framework 'React'.
           Zoals je ziet, kun je zelf een liedje invoeren met bijbehorende
           gegevens, zodat je hier een playlist van kunt maken. Leuk toch!!
