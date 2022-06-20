@@ -5,7 +5,7 @@ function List(props) {
   return (
     <div>
       {props.songs.map((item) => (
-        <SongItem item={item} key={item.id} />
+        <SongItem item={item} key={item.id} deleteSong={props.deleteSong} />
       ))}
     </div>
   );

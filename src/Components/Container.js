@@ -7,29 +7,7 @@ class Container extends React.Component {
   constructor() {
     super();
     this.state = {
-      songs: [
-        {
-          id: 1,
-          title: "Save your tears",
-          artist: "The Weekend",
-          genre: "pop",
-          rating: "3",
-        },
-        {
-          id: 2,
-          title: "Save your tears",
-          artist: "The Weekend",
-          genre: "pop",
-          rating: "3",
-        },
-        {
-          id: 3,
-          title: "Save your tears",
-          artist: "The Weekend",
-          genre: "pop",
-          rating: "3",
-        },
-      ],
+      songs: [],
       inputValue: {
         title: "",
         artist: "",
@@ -39,8 +17,11 @@ class Container extends React.Component {
     };
 
     this.addSongToList = this.addSongToList.bind(this);
-    this.deleteSongs = this.addSongToList.bind(this);
+    this.deleteSong = this.deleteSong.bind(this);
+    this.deleteSongs = this.deleteSongs.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.sortSongsAZ = this.sortSongsAZ.bind(this);
+    this.sortSongsZA = this.sortSongsZA.bind(this);
   }
 
   handleChange(event) {
@@ -75,9 +56,40 @@ class Container extends React.Component {
     });
   };
 
+  deleteSong(songId) {
+    const updateListSongs = [...this.state.songs];
+
+    const index = this.state.songs.findIndex((song) => song.id === songId);
+    updateListSongs.splice(index, 1);
+
+    this.setState({
+      songs: updateListSongs,
+    });
+  }
+
   deleteSongs() {
     this.setState({
       songs: [],
+    });
+  }
+
+  sortSongsAZ() {
+    const sortSongs = [...this.state.songs].sort((a, b) => {
+      return a.title > b.title ? 1 : -1;
+    });
+
+    this.setState({
+      songs: sortSongs,
+    });
+  }
+
+  sortSongsZA() {
+    const sortSongs = [...this.state.songs].sort((a, b) => {
+      return a.title < b.title ? 1 : -1;
+    });
+
+    this.setState({
+      songs: sortSongs,
     });
   }
 
@@ -89,8 +101,11 @@ class Container extends React.Component {
           songs={this.state.songs}
           onClick={this.addSongToList}
           handleChange={this.handleChange}
+          deleteButton={this.deleteSongs}
+          sortSongsAZ={this.sortSongsAZ}
+          sortSongsZA={this.sortSongsZA}
         />
-        <table style={{ width: "100%" }}>
+        <table className="table">
           <thead>
             <tr className="song-header">
               <th className="song-row__item">Song</th>
@@ -100,7 +115,7 @@ class Container extends React.Component {
             </tr>
           </thead>
         </table>
-        <List songs={this.state.songs} />
+        <List songs={this.state.songs} deleteSong={this.deleteSong} />
       </div>
     );
   }
